@@ -46,7 +46,7 @@
                     ->setCellValue("M".$counter, $row["currentTimePost_value"])
                     ->setCellValue("N".$counter, $row["hadAJobAtLastYearSt_value"])
                     ->setCellValue("O".$counter, $row["lastYearStWorkplace_value"])
-                    ->setCellValue("P".$counter, $row["	lastYearStPost_value"]);
+                    ->setCellValue("P".$counter, $row["lastYearStPost_value"]);
             if($row["hsenn_value"] != ""){
                 $sheet->setCellValue("Q".$counter, "Да");
             }

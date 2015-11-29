@@ -423,8 +423,6 @@
 <script type="text/javascript" src="js/jquery.inputmask-multi.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/jquery.chained.min.js"></script>
-<script type="text/javascript" src="plug-ins/PickMeUp-master/js/jquery.pickmeup.min.js"></script>
-<script type="text/javascript" src="plug-ins/jsPDF-master/dist/jspdf.min.js"></script>
 <script type="text/javascript" src="js/functions.js"></script>
 <script type="text/javascript" src="js/scripts.js"></script>
 </html>

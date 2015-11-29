@@ -3,8 +3,10 @@
         $mysqli = connectDB();
         if(!$mysqli)
         {
+          http_response_code(500);
           echo 'error';
-            return 0;
+
+          return;
         };
         $json = json_decode(stripslashes($_POST['json']), JSON_BIGINT_AS_STRING); 
    		//$query = "CREATE TABLE base (";

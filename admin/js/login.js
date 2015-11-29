@@ -14,6 +14,13 @@ $('#log-in').click(function(e){
                 $('#password').parent().addClass('has-error').addClass('has-feedback')
                 $('.glyphicon').removeClass('hidden');
             }
+
+        },
+        error: function(){
+            $('#log-in-fail-descr').html(msg);
+            $('#password').val('');
+            $('#password').parent().addClass('has-error').addClass('has-feedback')
+            $('.glyphicon').removeClass('hidden');
         }
     })
 });

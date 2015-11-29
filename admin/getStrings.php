@@ -68,10 +68,10 @@
 							<td>" . $row['phone_value'] . "</td>
 							<td>" . $row['faculty_value'] . "</td>
 							<td>" . $row['group_value'] . "</td>
-							<td>" . $row["lastYearStWorkplace_value"] . "</td>
-                            <td>" . $row["lastYearStPost_value"] . "</td>
                             <td>" . $row["currentTimeWorkplace_value"] . "</td>
                             <td>" . $row["currentTimePost_value"] . "</td>
+							<td>" . $row["lastYearStWorkplace_value"] . "</td>
+                            <td>" . $row["lastYearStPost_value"] . "</td>
 							<td><img class='delete' src='img/delete.png'></td>
 						</tr>";
 		}
@@ -80,6 +80,7 @@
 	else
 	{
 		$mysqli->close();
+        http_response_code(500);
 		echo "error";
 	}
 	echo $result;

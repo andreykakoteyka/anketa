@@ -1,8 +1,8 @@
 <?php
 	function connectDB()
 	{
-	  	//$mysqli = new mysqli("localhost", "u850348182_anket", "uT53DUDS75ITiN", "u850348182_anket");
-	  	$mysqli = new mysqli("mysql.hostinger.ru", "u816687978_anket", "uT53DUDS75ITiN", "u816687978_anket");
+            $mysqli = new mysqli("localhost", "u850348182_anket", "uT53DUDS75ITiN", "u850348182_anket");
+	  	//$mysqli = new mysqli("mysql.hostinger.ru", "u816687978_anket", "uT53DUDS75ITiN", "u816687978_anket");
         //mysql_select_db("u850348182_anket");
 	  	//mysql_select_db("u816687978_anket");
 
@@ -162,7 +162,7 @@
             PHPExcel_Style_Fill::FILL_SOLID);
         $sheet->getStyle('N1')->getFill()->getStartColor()->setRGB('EEEEEE');
 
-        $sheet->setCellValue("O1", "Место работы на последнем курсе: Должность");
+        $sheet->setCellValue("O1", "Место работы на последнем курсе: Компания");
         $sheet->getStyle('O1')->getFill()->setFillType(
             PHPExcel_Style_Fill::FILL_SOLID);
         $sheet->getStyle('O1')->getFill()->getStartColor()->setRGB('EEEEEE');

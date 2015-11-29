@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: localhost
--- Generation Time: Jun 28, 2015 at 09:21 PM
+-- Generation Time: Jun 30, 2015 at 10:49 PM
 -- Server version: 5.5.43-0ubuntu0.14.04.1
 -- PHP Version: 5.5.9-1ubuntu4.9
 
@@ -36,7 +36,7 @@ CREATE TABLE IF NOT EXISTS `base` (
   `stageOfStudying_value` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `faculty_value` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
   `group_value` varchar(10) COLLATE utf8_unicode_ci NOT NULL,
-  `phone_value` varchar(13) COLLATE utf8_unicode_ci NOT NULL,
+  `phone_value` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `email_value` varchar(30) COLLATE utf8_unicode_ci NOT NULL,
   `haveAJobNow_value` varchar(5) COLLATE utf8_unicode_ci NOT NULL,
   `currentTimeWorkplace_value` varchar(150) COLLATE utf8_unicode_ci NOT NULL,

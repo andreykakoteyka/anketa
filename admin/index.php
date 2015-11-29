@@ -106,10 +106,10 @@ $mysqli->close();
                   <th>Номер телефона</th>
                   <th>Факультет</th>
                   <th>Учебная группа</th>
-                  <th>Место работы на последнем курсе: Компания</th>
-                  <th>Место работы на последнем курсе: Должность</th>
                   <th>Текущее место работы: Компания</th>
                   <th>Текущее место работы: Должность</th>
+                  <th>Место работы на последнем курсе: Компания</th>
+                  <th>Место работы на последнем курсе: Должность</th>
                   <th>Удалить</th>
                 </tr>
               </thead>
@@ -208,7 +208,7 @@ $mysqli->close();
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            <a class="close" data-dismiss="modal" aria-hidden="true">&times;</a>
             <h4 class="modal-title">Добавить группу</h4>
           </div>
           <div class="modal-body">
@@ -239,7 +239,7 @@ $mysqli->close();
             </form>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal">Закрыть</button>
+            <a class="btn btn-default" data-dismiss="modal">Закрыть</a>
             <button type="button" class="btn btn-primary" id="add-group">Добавить</button>
           </div>
         </div><!-- /.modal-content -->
@@ -528,7 +528,7 @@ $mysqli->close();
       <div id="printBody"></div>
       <div>
         <div class="row" style=" margin-top: 40px;">
-          <div id="currentDate" class="col-lg-4 col-lg-offset-3" >
+          <div id="date" class="col-lg-4 col-lg-offset-3" >
 
           </div>
           <div class="lg-col-4" style="text-align: center; display: table-cell;">Подпись ____________________ </div>

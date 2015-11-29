@@ -17,7 +17,7 @@
 		hide_on_select: true,
 		first_day: 1,
 		default_date : currentDate,
-		view : 'years',
+		view : 'days',
 		locale: {
 				days:["Восресенье","Понедельник","Вторник","Среда","Четверг","Пятница","Суббота","Воскресенье"],
 				daysShort:["Вскр","Пн","Вт","Ср","Чт","Птн","Сб","Вскр"],
