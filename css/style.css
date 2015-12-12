@@ -1,287 +1,120 @@
-body,
-html{
-    color:#525252;
+
+/*FIX FOR DATEPICKER in version 0.11.4*/
+
+.md-datepicker-calendar, .md-datepicker-input-mask-opaque {
+    background: rgb(255, 255, 255);
 }
-#logo{
-    display: block;
-    height: 85%;
-    margin: auto;
-    -webkit-box-sizing: padding-box;
-       -moz-box-sizing: padding-box;
-            box-sizing: padding-box;
-    padding-top: 10px;
-    padding-bottom: 5px;
+
+
+.md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator,
+.md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {
+    background: rgb(33, 150, 243);
+    color: rgb(255, 255, 255);
+    border-color: transparent;
 }
-#arrow{
-    height: 15%;
-    background-color: #F6F6F6;
+.md-calendar-date-selection-indicator:hover {
+    background: rgb(224, 224, 224);
 }
-#arrow:hover,
-#arrow>img:hover{
-    background-color: #EFEFEF;
-    cursor: pointer;
+
+.md-calendar-day-header {
+    background: rgb(224, 224, 224);
+    color: rgba(0, 0, 0, 0.87);
 }
-#arrow>img{
-    display: block;
+
+.md-calendar-date-disabled,
+.md-calendar-month-label-disabled {
+    color: rgba(0, 0, 0, 0.26);
+}
+/*FIX FOR DATEPICKER in version 0.11.4*/
+
+html, body{
     height: 100%;
-    margin: auto;
-}
-.container{
-    padding-top: 20px;
-}
-.row{
-    padding-bottom: 3px;
-    padding-top: 3px;
-}
-.gifListStyle{
-    list-style: url(../img/check.gif)
-}
-.italic{
-    font-style: italic;   
-}
-.name{
-	text-transform:capitalize;
-}
-#showPreview,
-#accept{
-    margin: auto;
-    display: block;
-    width: auto;
-}
-.btn-active{
-    background: #196EEF;
-}
-.btn-active:hover{
-    background: #1661D3;
-}
-.btn-inactive{
-    background: #aaa;
-}
-.btn-inactive:hover{
-    background: #777;
-}
-.footer>div{
-    position: fixed;
-    bottom: -50px;
-    padding-bottom: 0;
-    width: inherit;
-}
-a{
-    color: inherit;
-}
-.form-group.has-success>.glyphicon-remove{
-    display: none;
-}
-.form-group.has-error>.glyphicon-ok{
-    display: none;
-}
-.form-group:not(.has-error):not(.has-success)>.form-control-feedback{
-    display: none;
-}
-.form-control-feedback{
-    margin-right: 15px;
-}
-.form-group{
-    margin-bottom: 0;
-}
-#previewLogo,
-#printLogo{
     width: 100%;
-}
-.preloader{
-    display: none;
-}
-.close{
-    font-size: 30px;
+    padding: 0;
+    margin: 0;
 }
 
 
-
-@media print{
-    header,
-    #body
-    {
-        display: none;
-        visibility: hidden;
-    }
-    .modal{
-        display: none;
-        visibility: hidden;
-    }
-    #page-to-print{
-        display: block !important;
-        visibility: visible !important;
-        width: 650px;
-        break-inside: avoid;
-        font-size: 12px;
-    }
-    .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12 {
-        float: left;
-    }
-    .col-lg-12 {
-        width: 100%;
-    }
-    .col-lg-11,
-    .col-lg-9 {
-        width: 91.66666667%;
-    }
-    .col-lg-10 {
-        width: 83.33333333%;
-    }
-    .col-lg-9 {
-        #width: 75%;
-    }
-    .col-lg-8{
-        width: 66.66666667%;
-    }
-    .col-lg-7 {
-        width: 58.33333333%;
-    }
-    .col-lg-6 {
-        #width: 50%;
-    }
-    .col-lg-6{
-        width: 75%;
-    }
-    .col-lg-5,
-    .col-lg-4{
-        width: 41.66666667%;
-    }
-    .col-lg-4 {
-        #width: 33.33333333%;
-    }
-    .col-lg-3 {
-        width: 25%;
-    }
-    .col-lg-2 {
-        width: 16.66666667%;
-    }
-    .col-lg-1 {
-        width: 8.33333333%;
-    }
-    .col-lg-pull-12 {
-        right: 100%;
-    }
-    .col-lg-pull-11 {
-        right: 91.66666667%;
-    }
-    .col-lg-pull-10 {
-        right: 83.33333333%;
-    }
-    .col-lg-pull-9 {
-        right: 75%;
-    }
-    .col-lg-pull-8 {
-        right: 66.66666667%;
-    }
-    .col-lg-pull-7 {
-        right: 58.33333333%;
-    }
-    .col-lg-pull-6 {
-        right: 50%;
-    }
-    .col-lg-pull-5 {
-        right: 41.66666667%;
-    }
-    .col-lg-pull-4 {
-        right: 33.33333333%;
-    }
-    .col-lg-pull-3 {
-        right: 25%;
-    }
-    .col-lg-pull-2 {
-        right: 16.66666667%;
-    }
-    .col-lg-pull-1 {
-        right: 8.33333333%;
-    }
-    .col-lg-pull-0 {
-        right: auto;
-    }
-    .col-lg-push-12 {
-        left: 100%;
-    }
-    .col-lg-push-11 {
-        left: 91.66666667%;
-    }
-    .col-lg-push-10 {
-        left: 83.33333333%;
-    }
-    .col-lg-push-9 {
-        left: 75%;
-    }
-    .col-lg-push-8 {
-        left: 66.66666667%;
-    }
-    .col-lg-push-7 {
-        left: 58.33333333%;
-    }
-    .col-lg-push-6 {
-        left: 50%;
-    }
-    .col-lg-push-5 {
-        left: 41.66666667%;
-    }
-    .col-lg-push-4 {
-        left: 33.33333333%;
-    }
-    .col-lg-push-3 {
-        left: 25%;
-    }
-    .col-lg-push-2 {
-        left: 16.66666667%;
-    }
-    .col-lg-push-1 {
-        left: 8.33333333%;
-    }
-    .col-lg-push-0 {
-        left: auto;
-    }
-    .col-lg-offset-12 {
-        margin-left: 100%;
-    }
-    .col-lg-offset-11 {
-        margin-left: 91.66666667%;
-    }
-    .col-lg-offset-10 {
-        margin-left: 83.33333333%;
-    }
-    .col-lg-offset-9 {
-        margin-left: 75%;
-    }
-    .col-lg-offset-8 {
-        margin-left: 66.66666667%;
-    }
-    .col-lg-offset-7 {
-        margin-left: 58.33333333%;
-    }
-    .col-lg-offset-6 {
-        margin-left: 50%;
-    }
-    .col-lg-offset-5 {
-        margin-left: 41.66666667%;
-    }
-    .col-lg-offset-4 {
-        margin-left: 33.33333333%;
-    }
-    .col-lg-offset-3{
-        #margin-left: 25%;
-    }
-
-    .col-lg-offset-3{
-        margin-left: 16.66666667%;
-    }
-    .col-lg-offset-2,{
-        #margin-left: 16.66666667%;
-    }
-    .col-lg-offset-1,
-    .col-lg-offset-2{
-        margin-left: 8.33333333%;
-    }
-    .col-lg-offset-0 {
-        margin-left: 0;
-    }
-
-
+header{
+    height: 120px;
+    width: 100%;
+    box-sizing: content-box;
+}
+header > md-toolbar > div{
+    padding-right: 120px;
 }
 
+
+#brand{
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 10px;
+}
+
+#brand > md-icon{
+    font-family: icomoon;
+    height: 100px;
+    width: 100px;
+}
+
+
+.content{
+    padding: 20px;
+    max-width: 960px;
+    margin: auto;
+}
+.validation-messages {
+    font-size: 11px;
+    color: darkred;
+    margin: 10px 0 0 25px;
+}
+
+md-input-container.md-input-invalid > md-select.ng-invalid > md-select-value {
+    border-color: rgb(244,67,54);
+}
+
+@media(min-width: 600px) and (max-width: 900px){
+    .md-display-2{
+        font-size: 24px;
+    }
+    #brand > md-icon{
+        font-family: icomoon;
+        height: 70px;
+        width: 70px;
+    }
+
+    header > md-toolbar > div{
+        padding-right: 90px;
+    }
+    header{
+        height: 90px;
+    }
+}
+
+@media (min-width: 600px) {
+    md-datepicker{
+        padding-top: 15px;
+        padding-right: 5px;
+    }
+}
+
+@media(max-width: 600px) {
+    #brand{
+        padding: 5px;
+    }
+    #brand > md-icon{
+        font-family: icomoon;
+        height: 30px;
+        width: 30px;
+    }
+
+    header > md-toolbar > div{
+        padding-right: 40px;
+    }
+    header{
+        height: 40px;
+    }
+    .md-display-2{
+        font-size: 16px;
+    }
+}

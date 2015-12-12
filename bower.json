@@ -1,0 +1,23 @@
+{
+  "name": "anketa",
+  "homepage": "https://github.com/andreykakoteyka/anketa",
+  "authors": [
+    "Igoshin Andrey <takeo@live.ru>"
+  ],
+  "description": "hse-anketa",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-material": "~0.11.4",
+    "moment": "momentjs#~2.10.6"
+  }
+}

@@ -1,3 +1,4 @@
 phpmyadmin
 **/.idea
 plug-ins/jsPDF-master
+**/bower_components
