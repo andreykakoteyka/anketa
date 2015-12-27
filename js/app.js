@@ -15,4 +15,4 @@ angular.module('app', dependencies).config([
         $mdIconProvider
             .icon('brand'      , '../img/brand.svg'       , 100);
     }
-]);git status
+]);

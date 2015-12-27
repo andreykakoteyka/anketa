@@ -53,8 +53,8 @@
                 <input type="tel" ng-model="anketa.phone">
             </md-input-container>
             <md-input-container flex-gt-sm="50">
-                <label>Email: </label>
-                <input type="email" required ng-model="anketa.email">
+                <label>E-mail: </label>
+                <input type="email" ng-required=true ng-model="anketa.email">
             </md-input-container>
         </md-content>
         <md-content layout='row' layout-sm='column' style="overflow: hidden">
@@ -71,7 +71,7 @@
                         <input type="text" ng-model="anketa.currentCompany">
                     </md-input-container>
                     <md-input-container layout="column">
-                        <label>Должость: </label>
+                        <label>Должность: </label>
                         <input type="text" ng-model="anketa.currentPost">
                     </md-input-container>
                 </md-content>
@@ -89,7 +89,7 @@
                         <input type="text" ng-model="anketa.companyBeforePractics">
                     </md-input-container>
                     <md-input-container layout="column">
-                        <label>Должость: </label>
+                        <label>Должность: </label>
                         <input type="text" ng-model="anketa.postBeforePractics">
                     </md-input-container>
                 </md-content>
@@ -100,59 +100,59 @@
                 После получения диплома Вы:
            </md-toolbar>
             <div layout="column" flex-offset="5" class="md-body-1">
-                <md-checkbox class="md-primary"ng-model="anketa.magHseNN">
-                    Планируете поступать в магистратуру НИУ ВШЭ НН
+                <md-checkbox class="md-primary" ng-model="anketa.magHseNN" ng-show="anketa.studyStage !==  'mag'">
+                    планируете поступать в магистратуру НИУ ВШЭ НН
                 </md-checkbox>
-                <md-checkbox class="md-primary"ng-model="anketa.magHseMoscow">
+                <md-checkbox class="md-primary" ng-model="anketa.magHseMoscow" ng-show="anketa.studyStage !==  'mag'">
                     планируете поступать в магистратуру НИУ ВШЭ - Москва
                 </md-checkbox>
-                <div layout="column">
+                <div layout="column" ng-show="anketa.studyStage !==  'mag'">
                     <md-checkbox class="md-primary"ng-model="anketa.magOtherUniversity">
                         планируете поступать в магистратуру другого ВУЗа(укажите какого)
                     </md-checkbox>
-                    <md-content ng-if="anketa.magOtherUniversity">
+                    <md-content ng-show="anketa.magOtherUniversity">
                         <md-input-container layout="column">
                             <label>ВУЗ: </label>
                             <input type="text" ng-model="anketa.otherUniversityName">
                         </md-input-container>
                     </md-content>
                 </div>
-                <div layout="column">
-                    <md-checkbox class="md-primary"ng-model="anketa.changeJob">
-                        Планируете сменить работу
+                <div layout="column" ng-show="anketa.hasJob">
+                    <md-checkbox class="md-primary" ng-model="anketa.changeJob">
+                        планируете сменить работу
                     </md-checkbox>
-                    <md-content layout="column" ng-if="anketa.changeJob">
+                    <md-content layout="column" ng-show="anketa.changeJob">
                         <md-input-container layout="column">
                             <label>Компания: </label>
                             <input type="text" ng-model="anketa.changeJobCompany">
                         </md-input-container>
                         <md-input-container layout="column">
-                            <label>Должость: </label>
+                            <label>Должность: </label>
                             <input type="text" ng-model="anketa.changeJobPost">
                         </md-input-container>
                     </md-content>
                 </div>
-                <div layout="column">
+                <div layout="column" ng-show="!anketa.hasJob">
 
                     <md-checkbox class="md-primary" ng-model="anketa.getJob">
-                        Планируете трудоустроиться
+                        планируете трудоустроиться
                     </md-checkbox>
-                    <md-content layout="column" ng-if="anketa.getJob">
+                    <md-content layout="column" ng-show="anketa.getJob">
                         <md-input-container layout="column">
                             <label>Компания: </label>
                             <input type="text" ng-model="anketa.getJobCompany">
                         </md-input-container>
                         <md-input-container layout="column">
-                            <label>Должость: </label>
+                            <label>Должность: </label>
                             <input type="text" ng-model="anketa.getJobPost">
                         </md-input-container>
                     </md-content>
                 </div>
-                <div layout="column">
+                <div layout="column" ng-show="anketa.studyStage !==  'mag'">
                     <md-checkbox class="md-primary" ng-model="anketa.other">
-                        Другое(укажите свой вариант)
+                        другое(укажите свой вариант)
                     </md-checkbox>
-                    <md-content ng-if="anketa.other">
+                    <md-content ng-show="anketa.other">
                         <md-input-container layout="column">
                             <label>Свой вариант: </label>
                             <input type="text" ng-model="anketa.otherText">

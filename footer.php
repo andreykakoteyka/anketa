@@ -9,6 +9,7 @@
 <script type="text/javascript" src="bower_components/moment/moment.js"></script>
 <script type="text/javascript" src="js/app.js"></script>
 <script type="text/javascript" src="js/modules/app.anketa.js"></script>
+<script type="text/javascript" src="js/modules/app.anketa.js"></script>
 <script type="text/javascript" src="js/services/anketa-service.js"></script>
 <script type="text/javascript" src="js/controllers/anketa.controller.js"></script>
 

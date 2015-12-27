@@ -30,4 +30,15 @@ angular.module('app.anketa').controller('anketaController', function($scope, Ank
     $scope.showPreview = function(){
         alert($scope.anketaForm.$valid);
     }
+
+    $scope.$watch('anketa.studyStage', function(newValue){
+        if(!newValue || newValue !== $scope.anketa.faculty.stage){
+            $scope.anketa.faculty = null;
+        }
+    })
+    $scope.$watch('anketa.faculty', function(newValue){
+        if(!newValue || newValue.id !== $scope.anketa.group.faculty_id){
+            $scope.anketa.group = null;
+        }
+    })
 });
