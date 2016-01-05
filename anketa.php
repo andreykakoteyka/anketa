@@ -96,7 +96,7 @@
             </div>
         </md-content>
         <div layout="column">
-           <md-toolbar class="md-title md-primary" align="center" layout-align="center">
+           <md-toolbar class="md-title md-primary" align="center" layout-align="center" style="padding:10px">
                 После получения диплома Вы:
            </md-toolbar>
             <div layout="column" flex-offset="5" class="md-body-1">
