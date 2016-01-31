@@ -1,0 +1,4 @@
+django#1.9.1
+django-filters
+psycopg2
+rest_framework

@@ -1,4 +1,3 @@
-phpmyadmin
 **/.idea
-plug-ins/jsPDF-master
 **/bower_components
+anketa/local_settings.py

@@ -1,0 +1,16 @@
+<md-dialog class="login-dialog">
+    <section layout="row" flex>
+        <md-icon flex="50" class="md-raised md-primary md-icon logo md-hue-2"  md-svg-icon="brand"></md-icon>
+        <form name="loginForm" class="login-form" flex="50" layout="column" layout-align="center" layout-padding>
+            <md-input-container class="md-hue-2">
+                <label>Логин </label>
+                <input name="login" ng-model="user.username" minlength="5" required>
+            </md-input-container>
+            <md-input-container class="md-hue-2">
+                <label>Пароль </label>
+                <input name="password" ng-model="user.password" minlength="6" type="password" required>
+            </md-input-container>
+            <md-button class="md-primary md-raised md-hue-2" ng-click="login()">Вход</md-button>
+        </form>
+    </section>
+</md-dialog>

@@ -1,0 +1,190 @@
+
+
+
+/*FIX FOR DATEPICKER in version 0.11.4*/
+
+/*.md-datepicker-calendar, .md-datepicker-input-mask-opaque {*/
+    /*background: rgb(255, 255, 255);*/
+/*}*/
+
+/*md-datepicker input{*/
+    /*color: #000;*/
+/*}*/
+
+
+/*.md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator,*/
+/*.md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {*/
+    /*background: rgb(33, 150, 243);*/
+    /*color: rgb(255, 255, 255);*/
+    /*border-color: transparent;*/
+/*}*/
+/*.md-calendar-date-selection-indicator:hover {*/
+    /*background: rgb(224, 224, 224);*/
+/*}*/
+
+/*.md-calendar-day-header {*/
+    /*background: rgb(224, 224, 224);*/
+    /*color: rgba(0, 0, 0, 0.87);*/
+/*}*/
+
+/*.md-calendar-date-disabled,*/
+/*.md-calendar-month-label-disabled {*/
+    /*color: rgba(0, 0, 0, 0.26);*/
+/*}*/
+/*FIX FOR DATEPICKER in version 0.11.4*/
+
+html, body{
+    min-height: 100%;
+    height: auto;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.background{
+    background: url("/static/questionnaire/img/background.jpg");
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.anketa{
+    background: #fff;
+}
+
+.header{
+    height: 120px;
+}
+
+#brand{
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 2px 10px;
+}
+
+#brand > md-icon{
+    font-family: icomoon;
+    height: 100px;
+    width: 100px;
+}
+
+md-toolbar.header > div{
+        padding-right: 120px;
+    }
+
+.content{
+    padding: 20px;
+    max-width: 960px;
+    margin: auto;
+}
+.content > *{
+    opacity: 0.85;
+}
+.validation-messages {
+    font-size: 11px;
+    color: darkred;
+    margin: 10px 0 0 25px;
+}
+
+md-input-container.md-input-invalid > md-select.ng-invalid > md-select-value {
+    border-color: rgb(244,67,54);
+}
+/* preview start*/
+.preview-header{
+    width: auto;
+    border-bottom: 1px solid #e5e5e5;
+    padding: 15px;
+}
+.preview-header > img{
+    width: 100%;
+    background-size: 100%;
+    background-repeat: no-repeat;
+
+}
+.close-preview{
+    position: absolute;
+    right: -5px;
+    top: 0px;
+}
+
+/* preview end*/
+
+/*dialogs*/
+body > .md-dialog-container{
+    display: block;
+    position: fixed;
+    top:0 !important;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-y: auto;
+}
+.md-dialog-container > md-dialog.preview{
+    display: block;
+    margin: 30px auto;
+    position: static;
+    max-height: none;
+}
+/*dialogs end*/
+md-toast{
+    position: fixed;
+    background: darkblue !important;
+}
+/*anketa*/
+/*.anketa > .form *{*/
+    /*-webkit-transition: all 0.5s ease;*/
+    /*-moz-transition: all 0.5s ease;*/
+    /*-o-transition: all 0.5s ease;*/
+    /*transition: all 0.5s ease;*/
+/*}*/
+/*anketa end*/
+@media(min-width: 600px) and (max-width: 900px){
+    .md-display-2{
+        font-size: 24px;
+    }
+    #brand > md-icon{
+        font-family: icomoon;
+        height: 70px;
+        width: 70px;
+    }
+
+    md-toolbar.header > div{
+        padding-right: 90px;
+    }
+    .header{
+        height: 90px;
+    }
+}
+
+@media (min-width: 600px) {
+    md-datepicker{
+        padding-top: 15px;
+        padding-right: 5px;
+    }
+}
+
+@media(max-width: 600px) {
+    #brand{
+        padding: 5px;
+    }
+    #brand > md-icon{
+        font-family: icomoon;
+        height: 50px;
+        width: 50px;
+    }
+
+    md-toolbar.header > div{
+        padding-right: 60px;
+    }
+    .header{
+        height: 60px;
+    }
+
+    .md-display-2{
+        font-size: 16px;
+    }
+}

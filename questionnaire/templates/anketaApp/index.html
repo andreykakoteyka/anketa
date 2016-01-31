@@ -1,0 +1,56 @@
+{% load staticfiles %}
+
+<html>
+<head>
+    <title>Анкета выпускника</title>
+    <script type="text/javascript" src="{% static 'questionnaire/bower_components/angular/angular.min.js' %}"></script>
+    <link rel="stylesheet" href="{% static 'questionnaire/bower_components/angular-material/angular-material.min.css' %}">
+    <link rel="stylesheet" href="{% static 'questionnaire/css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'questionnaire/bower_components/angularPrint/angularPrint.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+
+</head>
+<body ng-app='app'>
+
+
+{% block to_print %}
+{% endblock %}
+<div class="background"></div>
+<div class="content" layout-padding>
+    <md-toolbar class="md-primary md-raised md-hue-2 header" layout="row" layout-wrap>
+        <div layout-fill layout="row">
+            <md-button id="brand" md-no-ink ng-href="/" aria-label="Brand"><md-icon class="md-raised md-primary md-icon"  md-svg-icon="brand"></md-icon></md-button>
+            <!--md-icon class="md-primary" md-svg-icon="android"></md-icon-->
+            <div class="title" flex layout="row" layout-align="center center">
+                <div flex="none" class="md-display-2" id="title">
+                    Анкета выпускника
+                </div>
+            </div>
+        </div>
+    </md-toolbar>
+    {% block content %}
+    {% endblock %}
+</div>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angular-ui-router/release/angular-ui-router.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angular-material/angular-material.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angular-resource/angular-resource.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angular-aria/angular-aria.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angular-animate/angular-animate.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angular-material/angular-material.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/moment/moment.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/ngMask/dist/ngMask.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/bower_components/angularPrint/angularPrint.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/app.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/modules/app.questionnaire.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/services/questionnaire-service.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/services/faculty-service.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/services/group-service.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/services/degree-service.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/controllers/questionnaire.controller.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/modals/preview/app.preview.js' %}"></script>
+<script type="text/javascript" src="{% static 'questionnaire/js/modals/success/app.success.js' %}"></script>
+
+</body>
+
+</html>

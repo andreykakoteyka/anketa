@@ -1,0 +1,92 @@
+<md-dialog class="preview">
+
+    <div class="preview-header">
+        <img src="/static/questionnaire/img/logo-preview.png">
+        <md-button class="md-icon-button close-preview" ng-click="closePreview()">
+            <md-icon class="material-icons" aria-label="Close dialog">close</md-icon>
+        </md-button>
+    </div>
+    <md-content flex layout-padding>
+        <div class="md-headline" style="font-weight: bold" flex layout="row" layout-align="center center" layout-padding>Анкета выпускника</div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20"  flex="25" layout="row" layout-align="start">Фамилия:</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.familyName]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20" flex="25" layout="row" layout-align="start" >Имя:</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.firstName]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20" flex="25" layout="row" layout-align="start">Отчество:</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.lastName]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20" flex="25" layout="row" layout-align="start">Дата рождения: </div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[ anketa.birthday | date :'dd.MM.yyyy']]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20" flex="25" layout="row" layout-align="start">Уровень обучения:</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.degree.name]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20"  flex="25" layout="row" layout-align="start">Факультет:</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.faculty.name]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20" flex="25" layout="row" layout-align="start">Группа:</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.group.name]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20"  flex="25" layout="row" layout-align="start">Мобильный телефон: </div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.phone]]</div>
+        </div>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20"  flex="25" layout="row" layout-align="start">Трудоустроены в настоящее время (работаете/собираетесь приступить к работе)?</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.hasJob? 'Да':'Нет']]</div>
+        </div>
+        <ul flex-sm="100" flex-offset-gt-sm="20"  flex="30" ng-if="anketa.hasJob">
+            <li>Компания: [[anketa.currentCompany]]</li>
+            <li>Должность: [[anketa.currentPost]]</li>
+        </ul>
+        <div flex layout="row" layout-align-gt-sm="space-around center">
+            <div flex-sm="50" flex-offset-gt-sm="20" flex="25" layout="row" layout-align="start">Была ли у Вас оплачиваемая работа на последнем курсе(до преддипломной практики)?</div>
+            <div flex-sm="50" flex="45" layout="row" layout-align="start">[[anketa.hadJobBeforePractise? 'Да':'Нет']]</div>
+        </div>
+        <ul flex-sm="100" flex-offset-gt-sm="20" flex="30" ng-if="anketa.hadJobBeforePractise">
+            <li>Компания: [[anketa.companyBeforePractise]]</li>
+            <li>Должность: [[anketa.postBeforePractise]]</li>
+        </ul>
+        <div flex-sm="100" flex-offset-gt-sm="25" flex="70" ng-if="anketa.magHseNN || anketa.magHseMoscow || anketa.magOtherUniversity || anketa.changeJob || anketa.getJob || anketa.other">
+            После получения диплома Вы:
+            <ul>
+                <li ng-if="anketa.magHseNN">планируете поступать в магистратуру НИУ ВШЭ НН</li>
+                <li ng-if="anketa.magHseMoscow">планируете поступать в магистратуру НИУ ВШЭ Москва</li>
+                <li ng-if="magOtherUniversity">планируете поступать в магистратуру другого ВУЗа(укажите какого): [[anketa.otherUniversityName]]</li>
+                <li ng-if="anketa.changeJob">
+                    планируете сменить работу:
+                    <br>
+                    <ul style="list-style: none">
+                        <li>Компания: [[anketa.changeJobCompany]]</li>
+                        <li>Должность: [[anketa.changeJobPost]]</li>
+                    </ul>
+                </li>
+                <li ng-if="anketa.getJob">
+                    планируете трудоустроиться:
+                    <br>
+                    <ul style="list-style: none">
+                        <li>Компания: [[anketa.getJobCompany]]</li>
+                        <li>Должность: [[anketa.getJobPost]]</li>
+                    </ul>
+                </li>
+                <li ng-if="anketa.other">cвой вариант: [[anketa.otherText]]</li>
+            </ul>
+        </div>
+        <div flex-sm="100" flex-offset-gt-sm="20" flex-gt-sm="60" layout="column" layout-align="start center">
+            <p ng-if="anketa.agreeMail"><md-icon class="material-icons">&#xE876;</md-icon> Я заинтересован(-а) в получении еженедельной рассылки от Отдела развития карьеры НИУ ВШЭ - Нижний Новгород о вакансиях и мероприятиях в cфере карьеры</p>
+            <p ng-if="anketa.agreePersonalData"><md-icon class="material-icons">&#xE876;</md-icon> Я согласен(-на) на обработку и использование моих персональных данных в целях мониторинга трудоустройства и координации взаимодействия с выпускниками НИУ ВШЭ. Данное согласие может быть отозвано мною письменным заявлением в случае неправомерного использования предоставленных данных.</p>
+        </div>
+    </md-content>
+    <div flex layout="row" layout-align="center">
+        <md-button class="md-primary md-raised" ng-click="save()">Подтвердить</md-button>
+    </div>
+</md-dialog>
