@@ -24,7 +24,7 @@ angular.module('app.preview', ["ngMaterial"])
                     $mdDialog.show({
                         templateUrl:"/static/questionnaire/js/modals/success/view.html",
                         controller: "SuccessController",
-                        parent: angular.element(document.querySelector(".background")),
+                        parent: angular.element(document.querySelector(".content")),
                         clickOutsideToClose: false,
                         fullscreen: true
                     });
@@ -33,7 +33,7 @@ angular.module('app.preview', ["ngMaterial"])
                     var confirm = $mdDialog.confirm()
                           .title('Ошибка!')
                           .textContent('Произошла ошибка, пожалуйста повторите действие!')
-                          .parent(angular.element(document.querySelector(".background")))
+                          .parent(angular.element(document.querySelector(".content")))
                           .ariaLabel('Error')
                           .targetEvent($scope.$event)
                           .ok('Повторить')

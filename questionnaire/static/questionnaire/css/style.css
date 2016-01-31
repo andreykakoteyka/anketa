@@ -132,6 +132,8 @@ body > .md-dialog-container{
 /*dialogs end*/
 md-toast{
     position: fixed;
+}
+md-toast > div {
     background: darkblue !important;
 }
 /*anketa*/

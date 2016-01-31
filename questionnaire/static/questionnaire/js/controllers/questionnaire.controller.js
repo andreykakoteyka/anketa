@@ -47,7 +47,7 @@ angular.module('app.questionnaire').controller('QuestionnaireController', functi
               $mdToast.simple()
                 .content('Нет согласия на обработку персональных данных!')
                 .position(getToastPosition())
-                .parent(angular.element(document.querySelector(".background")))
+                .parent(angular.element(document.querySelector(".content")))
                 .hideDelay(3000)
             );
             delay += 3000;
@@ -70,7 +70,7 @@ angular.module('app.questionnaire').controller('QuestionnaireController', functi
                   $mdToast.simple()
                     .content('Анкета заполнена неверно или не полностью!')
                     .position(getToastPosition())
-                    .parent(angular.element(document.querySelector(".background")))
+                    .parent(angular.element(document.querySelector(".content")))
                     .hideDelay(3000)
                 );
             },
